@@ -1,18 +1,32 @@
 <template >
     <div>
-        <h1>Nombre: </h1>
-        <input v-model="nombre" type="text" />
-        <h1>Apellido: </h1>
-        <input v-model="apellido" type="text" />
-        <h1>Cedula: </h1>
-        <input v-model="cedula" type="text" />
-        <h1>Fecha de nacimiento: </h1>
-        <input v-model="fechaNacimiento" type="datetime-local" />
-        <h1>genero: </h1>
-        <input v-model="genero" type="text" />
-        <h1>Email: </h1>
-        <input v-model="email" type="email" />
-        <button type="submit" v-on:click="insertarCliente">Registrar</button>
+        <div class="form-floating mb-3">
+            <input v-model="nombre" type="text" class="form-control" id="floatingInput" placeholder="name" />
+            <label for="floatingInput">Nombre: </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input v-model="apellido" class="form-control" type="text" placeholder="aplldio" />
+            <label>Apellido: </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input v-model="cedula" class="form-control" type="text" placeholder="cedula" />
+            <label>Cedula: </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input v-model="fechaNacimiento" class="form-control" type="datetime-local" placeholder="fecha" />
+            <label>Fecha de nacimiento: </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input v-model="genero" class="form-control" type="text" placeholder="genero" />
+            <label>genero: </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input v-model="email" class="form-control" type="email" placeholder="email" />
+            <label>Email: </label>
+        </div>
+
+        <button class="btn btn-primary" type="submit" v-on:click="insertarCliente">Registrar</button>
+
     </div>
 </template>
 <script>
