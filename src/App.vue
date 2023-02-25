@@ -6,6 +6,7 @@
   <!-- <BorrarPorCedula /> -->
   <!-- <BorrarPorID /> -->
   <!-- <BuscarTodos/> -->
+  <NavBar/>
 </template>
 
 <script>
@@ -15,6 +16,7 @@ import Insertar from './pages/Insertar.vue';
 import BorrarPorCedula from './pages/BorrarPorCedula.vue';
 import BorrarPorID from './pages/BorrarPorID.vue';
 import BuscarTodos from './pages/BuscarTodos.vue';
+import NavBar from './components/NavBar.vue';
 export default {
   name: 'App',
   components: {
@@ -23,7 +25,8 @@ export default {
     Actualizar,
     BorrarPorCedula,
     BorrarPorID,
-    BuscarTodos
+    BuscarTodos,
+    NavBar
   }
 }
 </script>

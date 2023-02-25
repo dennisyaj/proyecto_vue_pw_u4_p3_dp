@@ -50,6 +50,9 @@ export default {
         this.genero = null
         this.email = null
     },
+    mounted() {
+        
+    },
 }
 </script>
 <style ></style>

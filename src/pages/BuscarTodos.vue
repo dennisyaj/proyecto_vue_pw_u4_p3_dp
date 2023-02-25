@@ -1,7 +1,7 @@
 <template >
     <div>
         <ul>
-            <li v-for=" cliente in clientes" :key="id">{{ cliente}}</li>
+            <li v-for=" cliente in clientes" :key="id">{{ cliente }}</li>
         </ul>
     </div>
 </template>
@@ -21,7 +21,10 @@ export default {
     },
     mounted() {
         this.buscarTodos()
-    },
+        console.log(this.$route.params);
+        const {idCliente} =this.$route.params
+        console.log(idCliente);
+     },
 }
 </script>
 <style ></style>
