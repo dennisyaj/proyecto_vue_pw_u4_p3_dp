@@ -19,10 +19,11 @@
         <input v-model="mycliente.genero" type="text" />
         <h1>Email: </h1>
         <input v-model="mycliente.email" type="email" />
+        <button type="submit" v-on:click="borrar()">Borrar</button>
     </div>
 </template>
 <script>
-import { obtenerPorCedulaFachada, actualizarFachada } from '../js/api_facturacion/ProcesarCliente.js'
+import { obtenerPorCedulaFachada, borrarPorCedulaFachada } from '../js/api_facturacion/ProcesarCliente.js'
 export default {
     data() {
         return {
@@ -42,6 +43,10 @@ export default {
         async buscarCliente() {
             const tmp = await obtenerPorCedulaFachada(this.cedula)
             this.mycliente = tmp
+
+        },
+        async borrar() {
+                await borrarPorCedulaFachada(this.mycliente.cedula)
         }
     },
 }

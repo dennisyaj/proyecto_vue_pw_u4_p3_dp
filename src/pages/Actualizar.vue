@@ -19,6 +19,7 @@
         <input v-model="mycliente.genero" type="text" />
         <h1>Email: </h1>
         <input v-model="mycliente.email" type="email" />
+        <button type="submit" v-on:click="actualizarCliente()">Actualizar</button>
     </div>
 </template>
 <script>
@@ -42,6 +43,19 @@ export default {
         async buscarCliente() {
             const tmp = await obtenerPorCedulaFachada(this.cedula)
             this.mycliente = tmp
+
+        },
+        async actualizarCliente() {
+            const cliente = {
+                "nombre": this.mycliente.nombre,
+                "apellido":this.mycliente.apellido,
+                "cedula": this.mycliente.cedula,
+                "fechaNacimiento": this.mycliente.fechaNacimiento,
+                "genero": this.mycliente.genero,
+                "email": this.mycliente.email
+            }
+            console.log(cliente);
+            await actualizarFachada(this.mycliente.id, cliente)
         }
     },
 }
