@@ -12,11 +12,11 @@ export const actualizarFachada = async (id, body) => {
     await actualizar(id, body)
 }
 
-export const buscarTodosFachada = () => {
-    return buscarTodos()
+export const buscarTodosFachada = async () => {
+    return await buscarTodos()
 }
 
-export const borrarPorIDFachada = (id) => {
+export const borrarPorIDFachada = async (id) => {
     borrarPorID(id)
 }
 
@@ -39,15 +39,15 @@ const actualizar = async (id, body) => {
     axios.put(`http://localhost:8081/API/Facturacion/V1/clientes/${id}`, body).then(r => r.data)
 }
 
-const buscarTodos = () => {
-
+const buscarTodos = async () => {
+    return axios.get(`http://localhost:8081/API/Facturacion/V1/clientes`).then(r => r.data)
 }
 
-const borrarPorID = (id) => {
+const borrarPorID = async (id) => {
     axios.delete(`http://localhost:8081/API/Facturacion/V1/clientes/${id}`).then(r => r.data)
 }
 
-const borrarPorCedula = (cedula) => {
+const borrarPorCedula = async (cedula) => {
     axios.delete(`http://localhost:8081/API/Facturacion/V1/clientes/porCedula/${cedula}`).then(r => r.data)
 }
 
