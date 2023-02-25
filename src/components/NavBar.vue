@@ -4,12 +4,12 @@
      <a href="/buscar">Buscar</a>     
     <a href="/insertar">Insertar</a>     
      <a href="/actualizar">Actualizar</a>      
-     <a href="/borrar">Borrar</a> -->       
-        <router-link to="/">Home</router-link>       
-        <router-link to="/buscar">Buscar</router-link>       
-        <router-link to="/insertar">Insertar</router-link>       
-        <router-link to="/actualizar">Actualizar</router-link>       
-        <router-link to="/borrar">Borrar</router-link>          
+     <a href="/borrar">Borrar</a> -->
+        <router-link to="/">Home</router-link>
+        <router-link to="/buscar">Buscar</router-link>
+        <router-link to="/insertar">Insertar</router-link>
+        <router-link to="/actualizar">Actualizar</router-link>
+        <router-link to="/borrar">Borrar</router-link>
     </div>
 </template>
 <script>

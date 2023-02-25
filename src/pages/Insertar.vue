@@ -51,7 +51,15 @@ export default {
         this.email = null
     },
     mounted() {
-        
+        console.log('Entró a la pagina insertar')
+        console.log(this.$route);
+        console.log(this.$route.query)
+        console.log(this.$route.query.provincia)
+        console.log(this.$route.query.estudiante)
+        const { provincia, estudiante } = this.$route.query
+        console.log('Nuevas impresiones');
+        console.log(provincia);
+        console.log(estudiante);
     },
 }
 </script>

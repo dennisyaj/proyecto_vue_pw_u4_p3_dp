@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <router-view></router-view>
   <!-- <BuscarPorCedula/> -->
   <!-- <Insertar /> -->
@@ -6,7 +7,6 @@
   <!-- <BorrarPorCedula /> -->
   <!-- <BorrarPorID /> -->
   <!-- <BuscarTodos/> -->
-  <NavBar/>
 </template>
 
 <script>
